@@ -1,0 +1,22 @@
+.MainContainer{
+   text-align: center;
+   .topmenu{
+      p{
+         justify-content: center;
+         text-align: center;
+         margin-left: 500px;
+      }
+   }
+   
+   .maintop{
+    margin-top: 0px;
+   }
+   .MainMenu{
+    margin-top: 20px;
+   }
+   .logout a:hover{
+      margin-left: 0px;
+      background-color: crimson;
+      
+   }
+}
