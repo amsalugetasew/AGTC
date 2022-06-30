@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Footer.scss"
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import TelegramIcon from '@mui/icons-material/Telegram';
 import twitter from "../../Image/twitter.png"
 import instagram from "../../Image/instagram.jpg"
+import facebook from "../../Image/twitter.png"
+import telegram from "../../Image/instagram.jpg"
 import { Link } from 'react-router-dom';
 function Footer() {
   return (
@@ -29,8 +29,8 @@ function Footer() {
         <div>
         <div className="footer1"><div id='footer1'>Follow Us</div>
           <div  className='fff'>
-            <div className="ffff"><FacebookRoundedIcon className='ffff'/> </div>
-            <div className=""><TelegramIcon className='ffff'/></div>
+            <div className="ffff"><img src={facebook} className='ffff'/> </div>
+            <div className=""><img src={telegram} className='ffff'/></div>
             <div className=""><img src={twitter} alt='twitter' className='twn'/></div>
             <div className=""><img src={instagram} alt='instagram' className='twn'/></div>
             </div>

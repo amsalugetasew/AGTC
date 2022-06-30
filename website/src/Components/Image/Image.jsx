@@ -6,10 +6,11 @@ import img2 from "../../Image/image3.jpg"
 import img3 from "../../Image/image4.jpg"
 import img4 from "../../Image/2.jpg"
 import img5 from "../../Image/3.jpg"
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import MobileStepper from "@material-ui/core/MobileStepper";
-import { Button } from '@material-ui/core'
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+// import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+// import MobileStepper from "@material-ui/core/MobileStepper";
+// import { Button } from '@material-ui/core'
 const MyCollection = [
   {
     label: "First Picture",

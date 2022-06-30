@@ -1,14 +1,6 @@
 import "./Navbar.scss"
-import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 // import Login from "../../Pages/Login/Login";
-import LanguageIcon from '@mui/icons-material/Language';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 import { Link } from "react-router-dom";
-import LoginIcon from '@mui/icons-material/Login';
 import Logo from "../../Image/logo.jpg"
 const Navbar = () => {
   return (
@@ -19,7 +11,7 @@ const Navbar = () => {
         </div>
         <div className="search">
           <input type="text" placeholder="Search" />
-          <SearchSharpIcon />
+          {/* <SearchSharpIcon /> */}
 
         </div>
         {/* <div className="items">
