@@ -1,0 +1,92 @@
+.MainContainer{
+   text-align: center;
+   .topmenu{
+      p{
+         justify-content: center;
+         text-align: center;
+         margin-left: 500px;
+      }
+   }
+   
+   .maintop{
+    margin-top: 0px;
+   }
+   .MainMenu{
+    margin-top: 20px;
+   }
+   .logout a:hover{
+      margin-left: 0px;
+      background-color: crimson;
+      
+   }
+}
+table{
+   // background-color: red;
+   padding: 200px;
+   justify-content: center;
+   table-layout: auto;
+   margin: 40px;
+   margin-left: 100px;
+   align-items: center;
+   width: 1000px;
+   
+   thead{
+      justify-content: center;
+      background-color: gray;
+      color: white;
+      th{
+         padding: 20px;
+         padding-left: 20px;
+         margin-left: 20px;
+         margin-right: 20px;
+      }
+   }
+   tbody{
+      padding: 30px;
+   }
+}
+.status{
+   padding: 5px;
+   border-radius: 5px;  
+   &#Activate{
+       color: green;
+       background-color: rgba(1, 50, 1, 0.239);
+   }
+   &#DeActive{
+      color: crimson;
+      background-color: rgba(1, 50, 1, 0.239);
+  }
+   &#Pending{
+       color: goldenrod;
+       background-color: rgba(232, 244, 9, 0.239);
+   }
+}
+.diactivate{
+   width: 150px;
+   padding: 10px;
+   border: none;
+   background-color: teal;
+   background-color: crimson;
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 10px;
+   &:disabled{
+       background-color: rgba(10, 86, 86, 0.322);
+       cursor: not-allowed;
+   }
+}
+.activate{
+   width: 150px;
+   padding: 10px;
+   border: none;
+   background-color: teal;
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 10px;
+   &:disabled{
+       background-color: rgba(10, 86, 86, 0.322);
+       cursor: not-allowed;
+   }
+}
