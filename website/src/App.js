@@ -34,6 +34,7 @@ import Accademics from "./Components/Accadamics/Accademics";
 import TrainingNConsultancy from "./Components/TrainingNConsultancy/TrainingNConsultancy";
 import Galary from "./Components/Galary/Galary";
 import MyAGTC from "./Components/LMS/MyAGTC";
+import TS from "./Pages/Internal/ts";
 function App() {
   return (
     <div className="App">
@@ -116,6 +117,11 @@ function App() {
           <Route path="/Login/Internal/Main/RemoveNews">
             <Route index element={
                 <RemoveNews/>
+            } />
+          </Route>
+          <Route path="Home/Other/ts">
+            <Route index element={
+                <TS/>
             } />
           </Route>
           <Route path="/Login/Internal/Main/Account/list">

@@ -12,9 +12,10 @@ export default function menu() {
         <ul class="dropdown">
                 <li><Link to="/Login/Internal/Main/Account/list">All lists</Link></li>
                 <li><Link to="/Login/Internal/Main/Account/Create">Assign Role</Link></li>
-                <li><Link to="/Login/Internal/Main/Account/Activate">Activate</Link></li>
+                {/* <li><Link to="/Login/Internal/Main/Account/Activate">Activate</Link></li> */}
                 <li><Link to="/Login/Internal/Main/Account/ChangePassword">Change Password</Link></li>
-                <li><Link to="/Home/Other/List">Change Password</Link></li>
+                {/* <li><Link to="/Home/Other/List">Change Password</Link></li>
+                <li><Link to="/Home/Other/ts">test</Link></li> */}
             </ul>
         </li>
         <li className='logout'><Link to="/Signips">Logout</Link></li>

@@ -49,20 +49,35 @@ table{
    padding: 5px;
    border-radius: 5px;  
    &#Activate{
-       color: green;
-       background-color: rgba(1, 50, 1, 0.239);
+       color: teal;
+      //  background-color: rgba(1, 50, 1, 0.239);
    }
-   &#DeActive{
+   &#Deactivate{
       color: crimson;
-      background-color: rgba(1, 50, 1, 0.239);
+      // background-color: rgba(226, 11, 40, 0.239);
   }
    &#Pending{
        color: goldenrod;
-       background-color: rgba(232, 244, 9, 0.239);
+      //  background-color: rgba(232, 244, 9, 0.239);
    }
 }
 .diactivate{
-   width: 150px;
+   width: auto;
+   padding: 10px;
+   border: none;
+   background-color: teal;
+   background-color: #d9534f;
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 10px;
+   &:disabled{
+       background-color: #fcd2d0;
+       cursor: not-allowed;
+   }
+}
+.delete{
+   width: auto;
    padding: 10px;
    border: none;
    background-color: teal;
@@ -71,13 +86,9 @@ table{
    font-weight: bold;
    cursor: pointer;
    margin-top: 10px;
-   &:disabled{
-       background-color: rgba(10, 86, 86, 0.322);
-       cursor: not-allowed;
-   }
 }
 .activate{
-   width: 150px;
+   width: auto;
    padding: 10px;
    border: none;
    background-color: teal;

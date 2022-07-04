@@ -61,7 +61,7 @@ recordRoutes.route("/users/add").post(async function (req, response) {
     var email =req.body.email;
     var password =req.body.password;
     var Cpassword =req.body.Cpassword;
-    var status ="Deactivate";
+    var status ="Pending";
     let today = new Date();
     var dateOfRegistartion = today;
     const salt = await  bcrypt.genSalt(10);

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import MainMenu from "../../Pages/Internal/menu";
+import Axios from 'axios'
 const Record = (props) => (
   <tr>
     <td >{props.record.firstName}</td>
@@ -23,6 +24,13 @@ const Record = (props) => (
         }}
       >
         Deactivate
+      </button> | 
+      <button className="delete"
+        onClick={() => {
+          props.deleteRecord(props.record._id);
+        }}
+      >
+        Delete
       </button>
     </td>
   </tr>
@@ -30,8 +38,6 @@ const Record = (props) => (
 
 export default function ActivateUser() {
   const [records, setRecords] = useState([]);
-
-  // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(`http://localhost:5000/record/`);
@@ -51,25 +57,20 @@ export default function ActivateUser() {
     return;
   }, [records.length]);
 
-
-  // This method will Activate a record
-  async function ActivateRecord(id) {
-    await fetch(`http://localhost:5000/update${id}`, {
-      method: "post"
-    });
-
-    const newRecords = records.filter((el) => el._id !== id);
-    setRecords(newRecords);
-
-  }  // This method will DeActivate a record
-  async function DeActivateRecord(id) {
-    await fetch(`http://localhost:5000/update${id}`, {
-      method: "post"
-    });
-
-    const newRecords = records.filter((el) => el._id !== id);
-    setRecords(newRecords);
-  }
+async function ActivateRecord(id) {
+  await fetch(`http://localhost:5000/update-user/${id}`, {
+    method: "post"
+  });
+  const newRecords = records.filter((el) => el._id !== id);
+  setRecords(newRecords);
+}
+async function DeActivateRecord(id) {
+  await fetch(`http://localhost:5000/update-user-d/${id}`, {
+    method: "post"
+  });
+  const newRecords = records.filter((el) => el._id !== id);
+  setRecords(newRecords);
+}
   // This method will delete a record
   async function deleteRecord(id) {
     await fetch(`http://localhost:5000/${id}`, {
@@ -87,16 +88,7 @@ export default function ActivateUser() {
        <> <Record
           record={record}
           ActivateRecord={() => ActivateRecord(record._id)}
-          key={record._id}
-        />
-        <Record
-          record={record}
           DeActivateRecord={() => DeActivateRecord(record._id)}
-          key={record._id}
-        />
-        <Record
-          record={record}
-          deleteRecord={() => deleteRecord(record._id)}
           key={record._id}
         />
         </>

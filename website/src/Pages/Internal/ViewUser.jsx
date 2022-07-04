@@ -5,13 +5,26 @@ import TopMenu from "../../Components/TopMenu/TopMenu";
 import MainMenu from "../../Pages/Internal/menu";
 const Record = (props) => (
   <tr>
-    <td>{props.record.firstName}</td>
+    <td >{props.record.firstName}</td>
     <td>{props.record.lastName}</td>
     <td>{props.record.email}</td>
-    <td style={{ backgroundColor: "yellow" }}>{props.record.status}</td>
+    <td className={'status'} id={props.record.status}>{props.record.status}</td>
     <td>
-      <Link className="btn btn-link" to={`/Home/Other/Edit/${props.record._id}`}>Edit</Link> |
-      <button className="btn btn-link"
+      <button className="activate" 
+      disabled={props.record.status === 'Activate'}
+      onClick={() => {
+        props.ActivateRecord(props.record._id);
+      }}
+      >Activate</button> |
+      <button className="diactivate"
+        disabled={props.record.status === 'Deactivate'}
+        onClick={() => {
+          props.DeActivateRecord(props.record._id);
+        }}
+      >
+        Deactivate
+      </button> | 
+      <button className="delete"
         onClick={() => {
           props.deleteRecord(props.record._id);
         }}
@@ -22,10 +35,9 @@ const Record = (props) => (
   </tr>
 );
 
+
 export default function ViewUser() {
   const [records, setRecords] = useState([]);
-
-  // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(`http://localhost:5000/record/`);
@@ -45,6 +57,20 @@ export default function ViewUser() {
     return;
   }, [records.length]);
 
+async function ActivateRecord(id) {
+  await fetch(`http://localhost:5000/update-user/${id}`, {
+    method: "post"
+  });
+  const newRecords = records.filter((el) => el._id !== id);
+  setRecords(newRecords);
+}
+async function DeActivateRecord(id) {
+  await fetch(`http://localhost:5000/update-user-d/${id}`, {
+    method: "post"
+  });
+  const newRecords = records.filter((el) => el._id !== id);
+  setRecords(newRecords);
+}
   // This method will delete a record
   async function deleteRecord(id) {
     await fetch(`http://localhost:5000/${id}`, {
@@ -59,11 +85,14 @@ export default function ViewUser() {
   function recordList() {
     return records.map((record) => {
       return (
-        <Record
+       <> <Record
           record={record}
+          ActivateRecord={() => ActivateRecord(record._id)}
+          DeActivateRecord={() => DeActivateRecord(record._id)}
           deleteRecord={() => deleteRecord(record._id)}
           key={record._id}
         />
+        </>
       );
     });
   }
@@ -85,10 +114,10 @@ export default function ViewUser() {
           </NavLink>
         </li>
       </ul>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table  style={{ marginTop: 20,paddingright:"-100px" }}>
         <thead>
           <tr>
-            <th>First Name</th>
+            <th style={{paddingright:"-10px"}}>First Name</th>
             <th>First Name</th>
             <th>User Email</th>
             <th>Status</th>

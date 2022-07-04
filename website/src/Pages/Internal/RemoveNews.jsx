@@ -50,7 +50,7 @@ function RemoveNews() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`http://localhost:5000/${id}`, {
+    await fetch(`http://localhost:5000/news/${id}`, {
       method: "DELETE"
     });
 

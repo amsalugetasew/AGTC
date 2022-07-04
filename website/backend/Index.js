@@ -15,6 +15,7 @@ const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 // get driver connection
 const dbo = require("./db/conn");
+// const dbos = require("./db/database");
  // routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
