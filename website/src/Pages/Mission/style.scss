@@ -14,9 +14,9 @@
         margin-left: 20px;
         text-align: 2px;   
         padding: 20px;
-        box-shadow: 3px 3px 3px 5px rgba(6, 172, 218, 0.52),
-        3px 3px 4px 5px rgb(0 0 0/14%),
-        3px 1px 8px 5px rgb(0 0 0/12%);  
+        // box-shadow: 3px 3px 3px 5px rgba(6, 172, 218, 0.52),
+        // 3px 3px 4px 5px rgb(0 0 0/14%),
+        // 3px 1px 8px 5px rgb(0 0 0/12%);  
         h1{
             text-decoration: underline;
         }
@@ -27,5 +27,21 @@
             word-spacing: 3px;
             letter-spacing: 1.5px;
         }   
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mainContent{
+        flex-direction: column;
+        margin-left: -5px;
+        
+        .content{
+            h1{
+                margin-right: 300px;
+            }
+            p{
+                width: 450px;
+                margin-right: 350px;
+            }
+        }
     }
 }

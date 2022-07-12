@@ -2,9 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./inde.scss"
 import Logo from "../../Image/logo.jpg"
+import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from 'material-ui-icons/Menu';
 function inde() {
   return (
     <div className='menu'>
+        <div className='icons'><MenuIcon/></div>
         <div className="avater">
           <img src={Logo} className="avater" alt="logo"/> 
         </div>

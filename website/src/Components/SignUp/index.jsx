@@ -18,33 +18,8 @@ const Index = () => {
     const handleChange = ({ currentTarget: input }) => {
         setData({ ...data, [input.name]: input.value });
     };
-
-
-    // const validate = (values) => {
-    //     const errors = {}
-        
-    //     if (!values.firstName) {
-    //       errors.firstName = "First Name is required";
-    //     }
-    //     if (!values.lastName) {
-    //       errors.lastName = "Last Name is required";
-    //     }
-    //     if (!values.userName) {
-    //       errors.userName = "User Name is required";
-    //     }
-    //     if (!values.password) {
-    //       errors.password = "Password is required";
-    //     }
-    //     if (values.password !== values.Cpassword) {
-    //       errors.Cpassword = "Password is not match";
-    //     }
-    //     return errors;
-    //   }
-
-    // const [formError, setFormError] = useState({});
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // setFormError(validate(data))  
         const newPerson = { ...data };
 
         await fetch("http://localhost:5000/users/add", {

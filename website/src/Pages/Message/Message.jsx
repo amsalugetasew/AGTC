@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import MenuIndex from '../../Components/Menu/MenuIndex'
 import Image from '../../Components/Image/Image'
@@ -12,9 +11,6 @@ function Message() {
             <div className="topmenu">
                 <TopMenu />
             </div>
-            {/* <div className="homeContainer">
-                <Navbar />
-            </div> */}
             <div className="menuContainer">
                 <MenuIndex />
             </div>
@@ -23,7 +19,7 @@ function Message() {
             </div>
             <div className='content'>
                 <div className='first'>
-                   <div className="images"> <img src={img1} alt="img1" className="img" /></div>
+                   <div className="images"> <img id='img' src={img1} alt="img1" className="img" /></div>
                    <div className='second'>
                     <p className="p1">Message from the President</p>
                    <p className="p2">

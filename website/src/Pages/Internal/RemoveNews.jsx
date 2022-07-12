@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import MainMenu from './menu'
 const Record = (props) => (
@@ -25,7 +25,14 @@ const Record = (props) => (
   </tr>
 );
 function RemoveNews() {
-
+  const navigate = useNavigate();
+  const win = window.sessionStorage;
+useEffect(()=>{
+  var x= win.getItem('email');
+  const y= win.getItem('password');
+  if(!x && !y)
+  navigate('/signips');
+})
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.

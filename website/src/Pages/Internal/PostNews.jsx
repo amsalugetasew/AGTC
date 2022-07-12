@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import MainTop from './MainTop'
 import MainMenu from './menu'
-import FileBase64 from 'react-file-base64';
+// import FileBase64 from 'react-file-base64';
 import TopMenu from "../../Components/TopMenu/TopMenu";
+// import { combineReducers, createStore  } from 'redux';
+// import { sessionReducer, sessionService  } from 'redux-react-session';
 function PostNews() {
   const [form, setForm] = useState({
     title: "",
@@ -11,8 +12,15 @@ function PostNews() {
     image: "",
     desc: "",
   });
-
-  const navigate = useNavigate();
+  const win = window.sessionStorage;
+useEffect(()=>{
+  var x= win.getItem('email');
+  const y= win.getItem('password');
+  if(!x && !y)
+  navigate('/signips');
+})
+  
+const navigate = useNavigate();
   const [formError, setFormError] = useState({});
   // These methods will update the state properties.
   function updateForm(value) {
@@ -72,7 +80,9 @@ function PostNews() {
           </div>
           <div className="col-md-6 main">
             <form onSubmit={onSubmit}>
-              <h1> Post News Form </h1>
+              <h1> Post News Form 
+                 {/* <div>{localStorage.getItem('name')}</div> */}
+                 </h1>
               <input className="box"
                 type="text"
                 name="title"

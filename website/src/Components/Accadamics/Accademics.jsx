@@ -55,7 +55,7 @@ function Accademics() {
             <div className="content">
                 <div className="mainContent">
                     <div className="title">
-                       <p> database administrator level 4 </p>
+                       <p className='p'> database administrator level 4 </p>
                        <div id='slideset1'>
                       <div>
                        <img src={dba1} alt="dba" />
@@ -83,7 +83,7 @@ function Accademics() {
                 </div>
                 <div className="mainContent">
                     <div className="title">
-                       <p> accounting and budgting level(IV)</p>
+                       <p className='p'> accounting and budgting level(IV)</p>
                        <div id='slideset1'>
                       <div>
                        <img src={ab1} alt="dba" />
@@ -114,7 +114,7 @@ function Accademics() {
                 </div>
                 <div className="mainContent">
                     <div className="title">
-                       <p> cadaster surveying level(IV)</p>
+                       <p className='p'> cadaster surveying level(IV)</p>
                        <div id='slideset1'>
                       <div>
                        <img src={CS1} alt="dba" />
@@ -148,7 +148,7 @@ function Accademics() {
                 </div>
                 <div className="mainContent">
                     <div className="title">
-                       <p> automotive technology level(IV)</p>
+                       <p className='p'> automotive technology level(IV)</p>
                        <div id='slideset1'>
                       <div>
                        <img src={AT1} alt="dba" />
@@ -179,7 +179,7 @@ function Accademics() {
                 </div>
                 <div className="mainContent">
                     <div className="title">
-                       <p> nursing level(IV)</p>
+                       <p className='p'> nursing level(IV)</p>
                        <div id='slideset1'>
                       <div>
                        <img src={N1} alt="dba" />
@@ -211,7 +211,7 @@ function Accademics() {
                 </div>
                 <div className="mainContent">
                     <div className="title">
-                       <p> pharmacy level(IV)</p>
+                       <p className='p'> pharmacy level(IV)</p>
                        <div id='slideset1'>
                       <div>
                        <img src={P1} alt="dba" />

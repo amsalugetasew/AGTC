@@ -76,9 +76,6 @@ const Contact = () => {
          <div className="signupTopmenu">
                 <TopMenu />
             </div>
-            {/* <div className="homeContainer">
-                <Navbar />
-            </div> */}
             <div className="menuContainer">
                 <MenuIndex />
             </div>
@@ -93,11 +90,6 @@ const Contact = () => {
                         
                     </div>
                     <h1><a href="https://www.google.com/maps/place/Gondar/@12.6142319,37.4290276,12.21z/data=!4m5!3m4!1s0x164328823d244edf:0x7826245358a8a65!8m2!3d12.6030181!4d37.4521319" target="_blank" rel="noopener noreferrer">Google Map</a></h1>
-                    {/* <Link to="/signips">
-                        <button type="button" className="white_btn">
-                            Sign in
-                        </button>
-                    </Link> */}
                 </div>
                 <div className="right">
                     <form className="form_container" onSubmit={handleSubmit}>

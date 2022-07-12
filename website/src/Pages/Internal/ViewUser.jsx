@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import MainMenu from "../../Pages/Internal/menu";
@@ -38,6 +38,14 @@ const Record = (props) => (
 
 export default function ViewUser() {
   const [records, setRecords] = useState([]);
+  const navigate = useNavigate();
+  const win = window.sessionStorage;
+useEffect(()=>{
+  var x= win.getItem('email');
+  const y= win.getItem('password');
+  if(!x && !y)
+  navigate('/signips');
+})
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(`http://localhost:5000/record/`);

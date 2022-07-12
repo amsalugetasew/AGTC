@@ -12,9 +12,6 @@ function History() {
       <div className="topmenu">
         <TopMenu/>
       </div>
-      {/* <div className="homeContainer">
-        <Navbar/>
-      </div> */}
       <div className="menuContainer">
         <MenuIndex />
       </div>

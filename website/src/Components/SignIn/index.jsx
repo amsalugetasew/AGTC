@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style.scss";
 import TopMenu from '../TopMenu/TopMenu';
 import { Link, useNavigate} from 'react-router-dom'
 import axios from "axios";
-import Navbar from '../Navbar/Navbar';
+// import Navbar from '../Navbar/Navbar';
 import MenuIndex from '../Menu/MenuIndex';
 import Footer from '../Footer/Footer';
 import Image from '../Image/Image';
+// import Session from 'react-session-api'
 const Index=() =>{
     const navigate = useNavigate();
     const token = sessionStorage.getItem('token'); //Add this line
@@ -18,7 +19,17 @@ const Index=() =>{
     const handleChange = ({currentTarget: input})=>{
         setData({...data,[input.name]:input.value});
     };
-
+    const win = window.sessionStorage;
+    // const person = {
+    //     email: data.email,
+    //     password: data.password,
+    // }
+    
+    // window.localStorage.setItem('user', JSON.stringify(person));
+    useEffect(()=>{
+      win.setItem('email', data.email)
+      win.setItem('password', data.password)
+    })
     const handleSubmit = async(e) =>{
         e.preventDefault();
         try{
@@ -26,7 +37,7 @@ const Index=() =>{
             const{data:res} = await axios.post(url,data);
             localStorage.setItem("token", res.data);
             // window.location= "/Login/Internal/Main/PostNews"
-            navigate("/Login/Internal/Main/PostNews");
+            navigate("/Login/Internal/Main/Account/list");
             // Authorization: `${res.data}, ${token}` //Add this line
         }
         catch(error){
@@ -76,6 +87,7 @@ const Index=() =>{
                         </button>
                     </form>
                 </div>
+                {/* <div>{localStorage.getItem('name')}</div> */}
                 <div className="right">
                 <h1>I don't have Account</h1>
                     <Link to="/signups">

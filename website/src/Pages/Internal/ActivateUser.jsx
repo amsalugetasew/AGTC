@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import MainMenu from "../../Pages/Internal/menu";
@@ -37,6 +37,14 @@ const Record = (props) => (
 );
 
 export default function ActivateUser() {
+  const navigate = useNavigate();
+  const win = window.sessionStorage;
+useEffect(()=>{
+  var x= win.getItem('email');
+  const y= win.getItem('password');
+  if(!x && !y)
+  navigate('/signips');
+})
   const [records, setRecords] = useState([]);
   useEffect(() => {
     async function getRecords() {

@@ -6,6 +6,9 @@
     margin-top: 40px;
     margin-left: -20px;
     margin-bottom: 30px;
+    .icons{
+        display: none;
+    }
     .avater {
         width: 70px;
         height: 70px;
@@ -40,7 +43,6 @@ ul li a {
     display: block;
     padding: 8px 10px;
     color: #333;
-    // color: #fff;
     text-decoration: none;
     opacity: 0.8;
     .sign{
@@ -75,3 +77,16 @@ ul li ul.dropdown li {
     background-color: #233b37;
     color: #fff;
 }
+
+
+@media only screen and (max-width: 600px) {
+    
+    .menu{
+        .icons{
+            display: inline;
+            justify-content: center;
+        }
+      background-color: lightblue;
+    display: none;
+    }
+  }

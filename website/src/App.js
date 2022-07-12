@@ -20,21 +20,18 @@ import PostNews from "./Pages/Internal/PostNews";
 import RemoveNews from "./Pages/Internal/RemoveNews";
 import ViewUser from "./Pages/Internal/ViewUser";
 import CreateUser from "./Pages/Internal/CreateUser";
-import ActivateUser from "./Pages/Internal/ActivateUser";
+// import ActivateUser from "./Pages/Internal/ActivateUser";
 import ChangePassword from "./Pages/Internal/ChangePassword";
 import Logins from "./test/login"
 import SiggnUp from "./Components/SignUp/index";
 import SiggnIp from "./Components/SignIn/index";
 import Mission from "./Pages/Mission/Mission";
-import Vision from "./Pages/Mission/Vision";
-import Goal from "./Pages/Mission/Goal";
 import NewsEvents from "./Components/News&Events/News&Events";
 import Contact from "./Pages/Contact/Contact";
 import Accademics from "./Components/Accadamics/Accademics";
 import TrainingNConsultancy from "./Components/TrainingNConsultancy/TrainingNConsultancy";
 import Galary from "./Components/Galary/Galary";
 import MyAGTC from "./Components/LMS/MyAGTC";
-import TS from "./Pages/Internal/ts";
 function App() {
   return (
     <div className="App">
@@ -69,16 +66,6 @@ function App() {
         <Route path="/Home/NewsAndEvents">
             <Route index element={
                 <NewsEvents/>
-            } />
-          </Route>
-        <Route path="/Home/MissionandVision/Goal">
-            <Route index element={
-                <Goal/>
-            } />
-          </Route>
-        <Route path="/Home/MissionandVision/Vision">
-            <Route index element={
-                <Vision/>
             } />
           </Route>
           <Route path="/Home/MissionandVision/Mision">
@@ -119,11 +106,6 @@ function App() {
                 <RemoveNews/>
             } />
           </Route>
-          <Route path="Home/Other/ts">
-            <Route index element={
-                <TS/>
-            } />
-          </Route>
           <Route path="/Login/Internal/Main/Account/list">
             <Route index element={
                 <ViewUser/>
@@ -134,11 +116,11 @@ function App() {
                 <CreateUser/>
             } />
           </Route>
-          <Route path="/Login/Internal/Main/Account/Activate">
+          {/* <Route path="/Login/Internal/Main/Account/Activate">
             <Route index element={
                 <ActivateUser/>
             } />
-          </Route>
+          </Route> */}
           <Route path="/Login/Internal/Main/Account/ChangePassword">
             <Route index element={
                 <ChangePassword/>

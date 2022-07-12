@@ -1,13 +1,24 @@
 const express = require("express");
+const session = require('express-session');
 const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
+// app.use(session({
+//   secret: "key that will sign cookie",
+//   resave: false,
+//   saveUninitialized: false,
+// }));
 app.use(cors());
 app.use(express.json());
 app.use(require("./routes/record"));
 app.use(require("./routes/signup"));
-app.use(require("./routes/PostNews"));
+app.use(require("./routes/PostNews")) //,(req, res) =>{
+  // req.session.isAuth = true;
+  // console.log(req.session);
+  // console.log(req.session.id)
+  // res.send("Hello Sessions are u here?");
+// });
 app.use(require("./routes/users"));
 // app.use(require("./routes/users"));
 app.use(require("./routes/auth"));

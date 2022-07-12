@@ -50,8 +50,7 @@ function Galary() {
                 <div className="mainContent">
                     <div className="title">
                        <p> Training Galary</p>
-                       <div id='slideset1'>
-                      <div>
+                       <div id='slideset1'><div>
                        <img className='db2' src={dba1} alt="dba" />
                        </div>
                        <div>

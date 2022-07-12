@@ -42,3 +42,16 @@
 //     width: 500px;
 //     height: 500px;
 // }
+@media only screen and (max-width: 600px) {
+    .title
+    {
+        display: flex;
+        flex-direction: column;
+        margin-left: -200px;
+        margin-right: 600px;
+        p{
+            margin-left: -900px;
+        }
+        
+    }
+}
