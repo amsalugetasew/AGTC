@@ -10,7 +10,7 @@ import Image from '../Image/Image';
 // import Session from 'react-session-api'
 const Index=() =>{
     const navigate = useNavigate();
-    const token = sessionStorage.getItem('token'); //Add this line
+    // const token = sessionStorage.getItem('token'); //Add this line
     const [data, setData] = useState({
         email: "",
         password: ""
@@ -54,9 +54,6 @@ const Index=() =>{
          <div className="topmenu">
                 <TopMenu />
             </div>
-            {/* <div className="homeContainer">
-                <Navbar />
-            </div> */}
             <div className="menuContainer">
                 <MenuIndex />
             </div>
@@ -71,6 +68,7 @@ const Index=() =>{
                             name= "email"
                             value={data.email}
                             className="input"
+                            id='input'
                             onChange={handleChange}
                             />
                         <input
@@ -79,15 +77,15 @@ const Index=() =>{
                             name= "password"
                             value={data.password}
                             className="input"
+                            id='input'
                             onChange={handleChange}
                             />
                             {error && <div className="error_msg">{error}</div>}
-                        <button type='submit' className="green_btn">
+                        <button type='submit' className="green_btn" id='input'>
                             Sign In
                         </button>
                     </form>
                 </div>
-                {/* <div>{localStorage.getItem('name')}</div> */}
                 <div className="right">
                 <h1>I don't have Account</h1>
                     <Link to="/signups">

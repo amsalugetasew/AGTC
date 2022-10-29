@@ -1,6 +1,6 @@
 import "./Navbar.scss"
 // import Login from "../../Pages/Login/Login";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Logo from "../../Image/logo.jpg"
 const Navbar = () => {
   return (

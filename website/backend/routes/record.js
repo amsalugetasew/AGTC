@@ -31,7 +31,6 @@ recordRoutes.route("/record").get(function (req, res) {
 
 
 recordRoutes.route("/add-phone").post( async function (req, res) {
-// app.post('/add-phone', async(req,res) => {
   const phoneNumber = new PhoneBook(req.body)
   let db_connect = dbo.getDb();
   var myobj = {
@@ -204,7 +203,25 @@ app.patch('/update/:id', async (req,res) => {
   }
 })
 
-
+// This section will help you update a record by id.
+recordRoutes.route("/update-user-profile/:id").post(async function (req, response) {
+  let db_connect = dbo.getDb(); 
+  var password = req.body.password;
+  let myquery = { _id: ObjectId( req.params.id )}; 
+  let newvalues = {   
+    $set: {         
+     password: password
+    }, 
+   }
+   console.log(newvalues)
+   await db_connect
+   .collection("Users").updateOne(myquery, newvalues, function(err, res) {
+     if (err) throw err;
+     response.json(res);
+     console.log("1 document updated");
+   });
+ });
+ 
 
 
 // This section will help you update a record by id.

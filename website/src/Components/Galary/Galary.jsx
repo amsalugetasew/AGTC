@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuIndex from '../../Components/Menu/MenuIndex'
 import TopMenu from '../../Components/TopMenu/TopMenu'
-import Pattern from "../../Image/pattern.png"
+// import Pattern from "../../Image/pattern.png"
 import dba1 from "../../Image/dba1.jpg"
 import dba2 from "../../Image/dba2.jpg"
 import dba3 from "../../Image/dba3.jpg"
@@ -19,7 +19,7 @@ import AT2 from "../../Image/AT2.jpg"
 import AT3 from "../../Image/AT3.jpg"
 import AT4 from "../../Image/AT4.jpg"
 import Footer from '../../Components/Footer/Footer'
-import Main from '../../Pages/Home/main'
+// import Main from '../../Pages/Home/main'
 import "./Galary.scss"
 function Galary() {
   return (

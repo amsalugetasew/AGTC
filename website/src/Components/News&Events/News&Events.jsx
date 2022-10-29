@@ -1,8 +1,8 @@
 import React from 'react'
 import MenuIndex from '../../Components/Menu/MenuIndex'
-import Navbar from '../../Components/Navbar/Navbar'
+// import Navbar from '../../Components/Navbar/Navbar'
 import TopMenu from '../../Components/TopMenu/TopMenu'
-import Image from '../../Components/Image/Image'
+// import Image from '../../Components/Image/Image'
 import SecondButton from '../../Components/SecondButton/SecondButton'
 import Footer from '../../Components/Footer/Footer'
 function NewsEvents() {

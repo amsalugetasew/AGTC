@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../../Components/Footer/Footer'
 import Image from '../../Components/Image/Image'
 import MenuIndex from '../../Components/Menu/MenuIndex'
-import Navbar from '../../Components/Navbar/Navbar'
+// import Navbar from '../../Components/Navbar/Navbar'
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import "./Administration.scss"
 function Administration() {

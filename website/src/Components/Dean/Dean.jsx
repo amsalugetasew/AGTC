@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Footer/Footer';
 import Image from '../Image/Image';
 import MenuIndex from '../Menu/MenuIndex';
-import Navbar from '../Navbar/Navbar';
+// import Navbar from '../Navbar/Navbar';
 import TopMenu from '../TopMenu/TopMenu';
 import "./Dean.scss";
 import img1 from "../../Image/image0.jpg"

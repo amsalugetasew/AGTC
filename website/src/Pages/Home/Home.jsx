@@ -5,7 +5,7 @@ import TopMenu from '../../Components/TopMenu/TopMenu'
 import Image from '../../Components/Image/Image'
 import Pattern from "../../Image/pattern.png"
 import Footer from '../../Components/Footer/Footer'
-import Main from './main'
+// import Main from './main'
 import profile1 from "../../Image/dba1.jpg"
 const Home = () => {
   const btnHandle = (e) => {

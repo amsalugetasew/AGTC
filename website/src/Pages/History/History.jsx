@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../../Components/Footer/Footer'
-import Navbar from '../../Components/Navbar/Navbar'
+// import Navbar from '../../Components/Navbar/Navbar'
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import MenuIndex from '../../Components/Menu/MenuIndex'
 import Image from '../../Components/Image/Image'

@@ -29,8 +29,8 @@ function Footer() {
         <div>
         <div className="footer1"><div id='footer1'>Follow Us</div>
           <div  className='fff'>
-            <div className="ffff"><img src={facebook} className='ffff'/> </div>
-            <div className=""><img src={telegram} className='ffff'/></div>
+            <div className="ffff"><img src={facebook} alt="facebook" className='ffff'/> </div>
+            <div className=""><img src={telegram} alt="telegram" className='ffff'/></div>
             <div className=""><img src={twitter} alt='twitter' className='twn'/></div>
             <div className=""><img src={instagram} alt='instagram' className='twn'/></div>
             </div>

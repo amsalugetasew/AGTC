@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import MainMenu from './menu'
 const Record = (props) => (

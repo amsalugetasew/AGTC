@@ -1,8 +1,8 @@
-
 import { BrowserRouter, 
   Routes, 
   Route
  } from "react-router-dom";
+ import 'antd/dist/antd.min.css';
 import Dean from "./Components/Dean/Dean";
 import Test from "./Components/SignUp/sign_up";
 import Navbar from "./Components/navbar";
@@ -32,14 +32,33 @@ import Accademics from "./Components/Accadamics/Accademics";
 import TrainingNConsultancy from "./Components/TrainingNConsultancy/TrainingNConsultancy";
 import Galary from "./Components/Galary/Galary";
 import MyAGTC from "./Components/LMS/MyAGTC";
+import Profile from "./Pages/Internal/Profile";
+import PasswordChange from "./Pages/Internal/passwordChange";
+import ToUpload from "./ToUpload"
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+        
+        <Route path="/to_Upload">
+            <Route index element={
+                <ToUpload/>
+            } />
+          </Route>
+        <Route path="/passwordChange">
+            <Route index element={
+                <PasswordChange/>
+            } />
+          </Route>
         <Route path="/Home/MyAGTC">
             <Route index element={
                 <MyAGTC/>
+            } />
+          </Route>
+        <Route path="/Login/Internal/Main/Account/Profile">
+            <Route index element={
+                <Profile/>
             } />
           </Route>
         <Route path="/Home/Galary">

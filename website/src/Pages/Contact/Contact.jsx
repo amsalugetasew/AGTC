@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 // import "./Styles.scss";
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import TopMenu from '../../Components/TopMenu/TopMenu';
-import Navbar from '../../Components/Navbar/Navbar';
+// import Navbar from '../../Components/Navbar/Navbar';
 import "./contact.scss";
 import Footer from '../../Components/Footer/Footer';
 import MenuIndex from '../../Components/Menu/MenuIndex';
@@ -21,31 +21,31 @@ const Contact = () => {
     };
 
 
-    const validate = (values) => {
-        const errors = {}
+    // const validate = (values) => {
+    //     const errors = {}
         
-        if (!values.firstName) {
-          errors.firstName = "First Name is required";
-        }
-        if (!values.lastName) {
-          errors.lastName = "Last Name is required";
-        }
-        if (!values.userName) {
-          errors.userName = "User Name is required";
-        }
-        if (!values.phone) {
-            errors.phone = "Phone Number is required";
-          }
-        if (!values.coment) {
-          errors.coment = "Comment is required";
-        }
-        // if (values.password !== values.confirmPassword) {
-        //   errors.confirmPassword = "Password is not match";
-        // }
-        return errors;
-      }
+    //     if (!values.firstName) {
+    //       errors.firstName = "First Name is required";
+    //     }
+    //     if (!values.lastName) {
+    //       errors.lastName = "Last Name is required";
+    //     }
+    //     if (!values.userName) {
+    //       errors.userName = "User Name is required";
+    //     }
+    //     if (!values.phone) {
+    //         errors.phone = "Phone Number is required";
+    //       }
+    //     if (!values.coment) {
+    //       errors.coment = "Comment is required";
+    //     }
+    //     // if (values.password !== values.confirmPassword) {
+    //     //   errors.confirmPassword = "Password is not match";
+    //     // }
+    //     return errors;
+    //   }
 
-    const [formError, setFormError] = useState({});
+    // const [formError, setFormError] = useState({});
     const handleSubmit = async (e) => {
         e.preventDefault();  
         const newPerson = { ...data };

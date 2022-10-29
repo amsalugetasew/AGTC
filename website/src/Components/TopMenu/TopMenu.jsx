@@ -1,6 +1,6 @@
 import React from 'react'
 import "./TopMenu.scss"
-import Logo from "../../Image/logo.jpg"
+// import Logo from "../../Image/logo.jpg"
 function TopMenu() {
   return (
     <div className='topmenu'>

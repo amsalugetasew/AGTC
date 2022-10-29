@@ -11,43 +11,43 @@ import img5 from "../../Image/3.jpg"
 // import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 // import MobileStepper from "@material-ui/core/MobileStepper";
 // import { Button } from '@material-ui/core'
-const MyCollection = [
-  {
-    label: "First Picture",
-    imgPath:
-      img1,
-  },
-  {
-    label: "Second Picture",
-    imgPath:
-      img2,
-  },
-  {
-    label: "Third Picture",
-    imgPath:
-      img3,
-  },
-  {
-    label: "Third Picture",
-    imgPath:
-      img4,
-  },
-  {
-    label: "Third Picture",
-    imgPath:
-      img5,
-  },
-];
+// const MyCollection = [
+//   {
+//     label: "First Picture",
+//     imgPath:
+//       img1,
+//   },
+//   {
+//     label: "Second Picture",
+//     imgPath:
+//       img2,
+//   },
+//   {
+//     label: "Third Picture",
+//     imgPath:
+//       img3,
+//   },
+//   {
+//     label: "Third Picture",
+//     imgPath:
+//       img4,
+//   },
+//   {
+//     label: "Third Picture",
+//     imgPath:
+//       img5,
+//   },
+// ];
 function Image() {
-  const CollectionSize = MyCollection.length;
-  const [index, setActiveStep] = React.useState(0);
+  // const CollectionSize = MyCollection.length;
+  // const [index, setActiveStep] = React.useState(0);
 
-  const goToNextPicture = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-  const goToPreviousPicture = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+  // const goToNextPicture = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  // };
+  // const goToPreviousPicture = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  // };
   return (
     <div className='image'>
 

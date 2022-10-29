@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import TopMenu from '../../Components/TopMenu/TopMenu'
-import MainTop from './MainTop'
+// import MainTop from './MainTop'
 import MainMenu from './menu'
 function ChangePassword() {
   const navigate = useNavigate();

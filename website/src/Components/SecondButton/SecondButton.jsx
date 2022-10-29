@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SecondButton.scss'
-import img from "../../Image/GMW.jpg"
+// import img from "../../Image/GMW.jpg"
 const Record = (props) => (
   <div className='dMain'>
    <div className='titlenNews'>

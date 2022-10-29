@@ -1,7 +1,6 @@
 // // Register Route
 // const router = require("express").Router();
 // // const { User, validate } = require("../Model/User");
-const bcrypt = require("bcrypt")
 // var express=require("express");
 // const recordRoutes = express.Router();
 // const dbo = require("../db/conn");
@@ -54,76 +53,44 @@ var express=require("express");
 var bodyParser=require("body-parser");
 const recordRoutes = express.Router();
 const dbo = require("../db/conn");
+
 recordRoutes.route("/users/add").post(async function (req, response) {
-    let db_connect = dbo.getDb();
+    try{
+  let db_connect = dbo.getDb();
     var firstName = req.body.firstName;
     var lastName =req.body.lastName;
     var email =req.body.email;
     var password =req.body.password;
-    var Cpassword =req.body.Cpassword;
     var status ="Pending";
-    var image ="req.body.image";
-  //   const fs = require('fs');
-  //   const path = require('path');
-  //   var img = {
-  //     data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-  //     contentType: 'image/png'
-  // }
-    // var img={
-    //   data: Buffer,
-    //   contentType: String
-    // }
     let today = new Date();
     var dateOfRegistartion = today;
-    const salt = await  bcrypt.genSalt(10);
-    const hashPassword = await  bcrypt.hash(password, salt);
-    const ChashPassword = await  bcrypt.hash(Cpassword, salt);
     const Cryptr = require("cryptr");
     const cryptr = new Cryptr("yoursecretkey");
     var encpassword = cryptr.encrypt(password);
-    var other = cryptr.encrypt('gecho');
-    var decother = cryptr.decrypt(other);
-    var decpassword= cryptr.decrypt(encpassword)
     var data = {
         "firstName": firstName,
         "lastName":lastName,
         "email": email,
         "password":encpassword,
         "status": status,
-        "profile": image,
         "dateOfRegistartion": dateOfRegistartion
     }
-    if(hashPassword===ChashPassword)
-    {
   const result = await db_connect.collection("Users").findOne({ email: email });
-  // const result1 = await db_connect.collection("Users").findOne({ firstName: firstName });
-
-    // if (result || result1) {
       if (result) {
-        console.log(`Email already exist '${email}'`);
-
-   
+        
+        console.log(`Email already exist '${email}'`); 
+        return response.status(401).send({ message: `Email already exist '${email}'` });  
   } else {
     const created = db_connect.collection("Users").insertOne(data, function (err, res) {
       if (err) throw err;
       response.json(res);
-      // console.log(`User registered with Email: '${email}'`);
-      // console.log(`user encrtpted password: '${encpassword}'`);
-      // console.log(`user decrtpted password: '${decpassword}'`);
-      // console.log(`user encrtpted password: '${other}'`);
-      // console.log(`user decrtpted password: '${decother}'`);
+      return response.status(401).send({ message: `successfully registered` });
     });
-    // if(created){
-    //   console.log("first");
-    //   return res.status(401).send({ message: "User created succefully" });
-    // }
-    // else{
-    //   console.log("second");
-    //   return res.status(401).send({ message: "User could'nt created" });
-    // }
-} }
-else{
-  console.log('not matched')
+} 
+}catch (error) {
+  response.status(500).send({ message: "Internal Server Error" });
 }
+
+
    });
 module.exports = recordRoutes;

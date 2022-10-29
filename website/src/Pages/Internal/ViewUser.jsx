@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import MainMenu from "../../Pages/Internal/menu";
@@ -8,6 +8,7 @@ const Record = (props) => (
     <td >{props.record.firstName}</td>
     <td>{props.record.lastName}</td>
     <td>{props.record.email}</td>
+    <td>{props.record.profile}</td>
     <td className={'status'} id={props.record.status}>{props.record.status}</td>
     <td>
       <button className="activate" 
@@ -115,19 +116,20 @@ async function DeActivateRecord(id) {
         <MainMenu />
       </div>
       <h3>Account List</h3>
-      <ul className="navbar-nav ml-auto">
+      {/* <ul className="navbar-nav ml-auto">
         <li className="nav-item" style={{ width: "100px" }}>
           <NavLink className="nav-link" to="/signups" style={{ width: "100px" }}>
             Add User
           </NavLink>
         </li>
-      </ul>
+      </ul> */}
       <table  style={{ marginTop: 20,paddingright:"-100px" }}>
         <thead>
           <tr>
             <th style={{paddingright:"-10px"}}>First Name</th>
             <th>First Name</th>
             <th>User Email</th>
+            <th>Profile</th>
             <th>Status</th>
             <th>Action</th>
           </tr>

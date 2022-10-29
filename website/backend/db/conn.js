@@ -13,7 +13,7 @@ module.exports = {
       if (db)
       {
         _db = db.db("AGTC");
-        console.log("Successfully connected to MongoDB."); 
+        console.log(`Successfully connected to MongoDB, ${_db.databaseName}`); 
       }
       return callback(err);
          });

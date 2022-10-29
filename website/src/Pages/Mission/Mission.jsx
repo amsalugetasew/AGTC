@@ -2,7 +2,6 @@ import React from 'react'
 import TopMenu from '../../Components/TopMenu/TopMenu'
 import MenuIndex from '../../Components/Menu/MenuIndex'
 import "./style.scss"
-import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import Image from '../../Components/Image/Image'
 function Mission() {
