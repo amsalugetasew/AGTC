@@ -12,9 +12,6 @@ function Administration() {
          <div className="topmenu">
                 <TopMenu />
             </div>
-            {/* <div className="homeContainer">
-                <Navbar />
-            </div> */}
             <div className="menuContainer">
                 <MenuIndex />
             </div>
@@ -26,7 +23,7 @@ function Administration() {
                 <div className="position">Vice Dean</div>
                 <div className="position">Secretariat Office</div>
             </div>
-            <div className='content'>
+            {/* <div className='content'>
                 <div className="position">Dean</div>
                 <div className="position">Vice Dean</div>
                 <div className="position">Secretariat Office</div>
@@ -45,7 +42,7 @@ function Administration() {
                 <div className="position">Dean</div>
                 <div className="position">Vice Dean</div>
                 <div className="position">Secretariat Office</div>
-            </div>
+            </div> */}
             <div className="bottom2">
                 <Footer />
             </div>

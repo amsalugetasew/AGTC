@@ -5,7 +5,6 @@ import TopMenu from '../../Components/TopMenu/TopMenu'
 import Image from '../../Components/Image/Image'
 import Pattern from "../../Image/pattern.png"
 import Footer from '../../Components/Footer/Footer'
-// import Main from './main'
 import profile1 from "../../Image/dba1.jpg"
 const Home = () => {
   const btnHandle = (e) => {
@@ -47,7 +46,6 @@ const Home = () => {
             </span>
           </p>
           <button className='more' onClick={btnHandle}>Read More</button>
-          {/* <script src={Main}></script> */}
           <span className='img'><img className='img' src={Pattern} alt="pattern" /></span>
         </div>
         <div className="image">

@@ -9,17 +9,16 @@ import ab1 from "../../Image/AB1.jpg"
 import ab2 from "../../Image/AB2.jpg"
 import ab3 from "../../Image/AB5.jpg"
 import ab4 from "../../Image/AB4.jpg"
-import CS1 from "../../Image/CS1.jpg"
-import CS2 from "../../Image/CS2.jpg"
-import CS3 from "../../Image/CS3.jpg"
-import CS4 from "../../Image/CS4.jpg"
-import CS5 from "../../Image/CS5.jpg"
+import CS1 from "../../Image/CS11.jpg"
+import CS2 from "../../Image/CS21.jpg"
+import CS3 from "../../Image/CS31.jpg"
+import CS4 from "../../Image/CS41.jpg"
+import CS5 from "../../Image/CS51.jpg"
 import AT1 from "../../Image/AT1.jpg"
 import AT2 from "../../Image/AT2.jpg"
 import AT3 from "../../Image/AT3.jpg"
 import AT4 from "../../Image/AT4.jpg"
 import Footer from '../../Components/Footer/Footer'
-// import Main from '../../Pages/Home/main'
 import "./Galary.scss"
 function Galary() {
   return (

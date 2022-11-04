@@ -22,12 +22,14 @@ function Dean() {
                 <Image />
             </div>
             <div className="content">
-                <p className="p1">dean, aragaw</p>
+                <p className="p1">Addis Gafat Technology College</p>
                 <div className='images'>
                     <img src={img1} alt="1" className="img1" />
-                    <p className="img">dean, aragaw</p>
+                    <p className="img">Mr. aragaw</p>
                 </div>
+                <div className='message'>Here is Mr. Aragaw Message... iDear Parents and Students, It is with great pleasure that I welcome you to our Vidyalaya website. As Principal I am hugely impressed by the commitment of the management and the staff for providing excellent all-round education for our students in our state of the art facilities.</div>
             </div>
+            
             <div className="bottom2">
                 <Footer />
             </div>
