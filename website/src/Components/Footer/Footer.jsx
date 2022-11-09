@@ -11,7 +11,7 @@ function Footer() {
     <div className='footer'>
     <div className="footer1" > <div id='footer1'>Address</div> 
         <div className="footer1">Gondar Addis Gafat Technology College PLC</div>
-        <div className="footer2">Address: kebele 16</div>
+        <div className="footer2">Address: kebele 17 in front of St. Gebriale church</div>
         <div className="footer2">Gondar City</div>
         <div className="footer2">Tel:+251582110481</div>
         <div className="footer2">Phone:+251940961646</div>
@@ -29,7 +29,10 @@ function Footer() {
         <div>
         <div className="footer1"><div id='footer1'>Follow Us</div>
           <div  className='fff'>
-            <div className="ffff"><img src={facebook} alt="facebook" className='ffff'/> </div>
+            <div className="ffff"><a href="https://github.com/amsalugetasew">
+              {/* fb */}
+              <img src={facebook} alt="facebook" className='ffff'/>
+            </a> </div>
             <div className=""><img src={telegram} alt="telegram" className='ffff'/></div>
             <div className=""><img src={twitter} alt='twitter' className='twn'/></div>
             <div className=""><img src={instagram} alt='instagram' className='twn'/></div>

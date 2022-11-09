@@ -2,9 +2,10 @@ import { BrowserRouter,
   Routes, 
   Route
  } from "react-router-dom";
+ import 'antd/dist/antd.min.css'
 //  import 'antd/dist/antd.min.css';
 //  import 'antd/dist/antd.css';
- import 'antd/dist/antd.min.css';
+//  import 'antd/dist/antd.min.css';
 // import 'antd/dist/antd.less';
 import Dean from "./Components/Dean/Dean";
 import Test from "./Components/SignUp/sign_up";
