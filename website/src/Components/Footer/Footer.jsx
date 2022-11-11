@@ -11,7 +11,7 @@ function Footer() {
     <div className='footer'>
     <div className="footer1" > <div id='footer1'>Address</div> 
         <div className="footer1">Gondar Addis Gafat Technology College PLC</div>
-        <div className="footer2">Address: kebele 17 in front of St. Gebriale church</div>
+        <div className="footer2">Address: kebele 14 in front of yemisrach</div>
         <div className="footer2">Gondar City</div>
         <div className="footer2">Tel:+251582110481</div>
         <div className="footer2">Phone:+251940961646</div>

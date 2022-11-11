@@ -87,7 +87,8 @@ const Contact = () => {
                         <h8>+251-582-110-481</h8>
                         <h8>+251-940-961-646</h8>
                         <h8> aragawm2016@gmail.com</h8>
-                        
+                        <h8>gafataddis1@gmail.com</h8>
+                        <h8>PoBox 612</h8>
                     </div>
                     <h1><a href="https://www.google.com/maps/place/Gondar/@12.6142319,37.4290276,12.21z/data=!4m5!3m4!1s0x164328823d244edf:0x7826245358a8a65!8m2!3d12.6030181!4d37.4521319" target="_blank" rel="noopener noreferrer">Google Map</a></h1>
                 </div>
